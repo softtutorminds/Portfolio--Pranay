@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlWoxTsblHQiHF-4--9tOfa2F6JhMiEQixopzdi6EwBE-iWz-Lw6xC6PN8GpDbfYDieGs&usqp=CAU" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+<section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>P</span>ranay <span>R</span>eddy</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="/home" data-after="Home">Home</a></li>
+                    <li><a href="/services" data-after="Service">Services</a></li>
+                    <li><a href="/projects" data-after="Projects">Projects</a></li>
+                    <li><a href="/about" data-after="About">About</a></li>
+                    <li><a href="/contact" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+   <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="https://10pranay.netlify.app/IMG_20240803_194810.jpg" alt="img">
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title">About <span>me</span></h1>
+        <h2>Full Stack Developer</h2>
+        <p>A Full Stack Developer is a versatile professional skilled in both front-end and back-end development,
+         capable of building complete and functional web applications. On the front end, they create intuitive user
+          interfaces using technologies like HTML, CSS, JavaScript, and frameworks such as React or Angular.
+           This ensures the application is visually appealing and user-friendly. 
+           On the back end, they handle server-side logic, database interactions,
+            and application integration using technologies like 
+         Java, along with databases such as MySQL or MongoDB.</p>
+        <a href="#" class="cta">Download Resume</a>
+      </div>
+    </div>
+  </section>
+   <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>P</span>RANAY <span>R</span>EDDY</h1>
+      </div>
+      <h2>Your Complete Web Solution</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="#"></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.facebook.com/pranay0418"> <i class="fab fa-facebook fa-3x "></i></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.instagram.com/mr_official_165/"> <i class="fab fa-instagram  fa-3x"></i></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.linkedin.com/in/pranay-reddy-3407222a0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BgakSclQoRV2dTKYtFFu0lA%3D%3D"> <i class="fab fa-linkedin  fa-3x"></i></a>
+        </div>
+      </div>
+      <p>Copyright © 2024 Pranay. All rights reserved</p>
+    </div>
+  </section>
+  <script>
+    const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
+const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
+const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
+const header = document.querySelector('.header.container');
+
+hamburger.addEventListener('click', () => {
+	hamburger.classList.toggle('active');
+	mobile_menu.classList.toggle('active');
+});
+
+document.addEventListener('scroll', () => {
+	var scroll_position = window.scrollY;
+	if (scroll_position > 250) {
+		header.style.backgroundColor = '#29323c';
+	} else {
+		header.style.backgroundColor = 'transparent';
+	}
+});
+
+menu_item.forEach((item) => {
+	item.addEventListener('click', () => {
+		hamburger.classList.toggle('active');
+		mobile_menu.classList.toggle('active');
+	});
+});
+  </script>
+</body>
+</html>
